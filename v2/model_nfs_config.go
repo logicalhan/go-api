@@ -9,7 +9,9 @@
  */
 
 package api
-// MasterDeploymentInfoAllOf struct for MasterDeploymentInfoAllOf
-type MasterDeploymentInfoAllOf struct {
-	Health MasterHealth `json:"health,omitempty"`
+// NfsConfig struct for NfsConfig
+type NfsConfig struct {
+	Exports *[]NfsExportConfig `json:"exports,omitempty"`
+	// The address to which the NFS server is bound. 
+	ServiceEndpoint *string `json:"serviceEndpoint,omitempty"`
 }
